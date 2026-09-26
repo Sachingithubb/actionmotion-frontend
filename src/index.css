@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+@keyframes authBackgroundMotion {
+  0% {
+    transform: scale(1);
+    background-position: center center;
+  }
+
+  50% {
+    transform: scale(1.045);
+    background-position: 52% 48%;
+  }
+
+  100% {
+    transform: scale(1);
+    background-position: center center;
+  }
+}
+
+.auth-background {
+  animation: authBackgroundMotion 18s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .auth-background {
+    animation: none;
+  }
+}
